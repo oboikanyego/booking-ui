@@ -1,0 +1,29 @@
+<mat-card>
+  <h2>Bookings</h2>
+
+  <form (ngSubmit)="create()" class="form">
+    <mat-form-field>
+      <input matInput placeholder="Client Name" [(ngModel)]="form.clientName" name="clientName">
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput placeholder="Service" [(ngModel)]="form.service" name="service">
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput type="date" [(ngModel)]="form.date" name="date">
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput type="time" [(ngModel)]="form.time" name="time">
+    </mat-form-field>
+
+    <button mat-raised-button color="primary">Add Booking</button>
+  </form>
+</mat-card>
+
+<mat-card *ngFor="let b of bookings" class="mt">
+  {{ b.clientName }} - {{ b.service }}  
+  <br />
+  {{ b.date }} at {{ b.time }}
+</mat-card>
