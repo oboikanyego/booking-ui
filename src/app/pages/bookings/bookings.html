@@ -22,8 +22,10 @@
   </form>
 </mat-card>
 
-<mat-card *ngFor="let b of bookings" class="mt">
-  {{ b.clientName }} - {{ b.service }}  
-  <br />
-  {{ b.date }} at {{ b.time }}
-</mat-card>
+@for (b of bookings; track b) {
+  <mat-card class="mt">
+    {{ b.clientName }} - {{ b.service }}
+    <br />
+    {{ b.date }} at {{ b.time }}
+  </mat-card>
+}

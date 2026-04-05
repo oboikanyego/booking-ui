@@ -12,7 +12,7 @@ import {
   ReactiveFormsModule,
   Validators,
 } from '@angular/forms';
-import { CommonModule } from '@angular/common';
+
 import { MatCardModule } from '@angular/material/card';
 
 @Component({
@@ -22,9 +22,8 @@ import { MatCardModule } from '@angular/material/card';
     MatFormFieldModule,
     FormsModule,
     ReactiveFormsModule,
-    MatCardModule,
-    CommonModule,
-  ],
+    MatCardModule
+],
   templateUrl: './bookings.html',
   styleUrls: ['./bookings.scss'],
 })
